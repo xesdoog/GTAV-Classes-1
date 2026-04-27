@@ -1,7 +1,8 @@
-#pragma once
+﻿#pragma once
 
 #include "../entities/CPhysical.hpp"
 #include "CHandlingData.hpp"
+#include "CWheel.hpp"
 
 #include <cstdint>
 #include <cmath>
@@ -64,7 +65,9 @@ public:
 	bool m_is_targetable; //0x0AEE
 	char pad_0AEF[313]; //0x0AEF
 	uint32_t m_type; //0x0C28
-	char pad_0C2C[112]; //0x0C2C
+	char pad_0C2C[4]; //0x0C2C
+	class rage::atArray<CWheel*> m_wheels; //0x0C30
+	char pad_0C40[92]; //0x0C40
 	float m_gravity; //0x0C9C
 	uint8_t m_max_passengers; //0x0CA0
 	char pad_0CA1[1]; //0x0CA1
